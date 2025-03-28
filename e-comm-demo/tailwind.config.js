@@ -11,7 +11,16 @@ module.exports = {
             700: '#4338ca',
           },
         },
+        aspectRatio: {
+            '1': '1',
+          },
       },
     },
+    variants: {
+        extend: {
+          opacity: ['disabled'],
+          backgroundColor: ['disabled'],
+        },
+      },
     plugins: [],
   }
