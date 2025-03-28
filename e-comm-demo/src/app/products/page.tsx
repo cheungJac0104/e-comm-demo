@@ -53,10 +53,13 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       {/* Navigation */}
       <nav className="bg-white border-b border-gray-200 px-4 py-3">
         <div className="flex items-center">
-          <Link href="/products" className="mr-4 text-gray-600 hover:text-indigo-600">
+          <Link 
+          //href="/products" 
+          href="/"
+          className="mr-4 text-gray-600 hover:text-indigo-600">
             <FiArrowLeft className="h-5 w-5" />
           </Link>
-          <h1 className="text-lg font-medium text-gray-900">Back to Products</h1>
+          <h1 className="text-lg font-medium text-gray-900">Back to Home</h1>
         </div>
       </nav>
 
