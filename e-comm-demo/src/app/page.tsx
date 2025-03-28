@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { FiShoppingBag, FiStar, FiShield, FiTruck, FiArrowRight } from 'react-icons/fi';
 
 export default function HomePage() {
@@ -56,10 +57,12 @@ export default function HomePage() {
           </div>
           <div className="md:w-1/2 flex justify-center">
             <div className="relative w-full max-w-md">
-              <img 
+              <Image 
                 src="/images/hero-product.png" 
                 alt="EcoActive Product" 
                 className="w-full h-auto rounded-lg shadow-xl transform rotate-1 hover:rotate-0 transition duration-500"
+                width={500}
+                height={500}
               />
               <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-md">
                 <div className="flex items-center">
@@ -189,10 +192,12 @@ export default function HomePage() {
             ].map((product) => (
               <div key={product.id} className="bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition">
                 <div className="relative">
-                  <img 
+                  <Image 
                     src={product.image} 
                     alt={product.name} 
                     className="w-full h-64 object-cover"
+                    width={500}
+                    height={500}
                   />
                   {product.isNew && (
                     <div className="absolute top-2 right-2 bg-indigo-600 text-white text-xs px-2 py-1 rounded">
@@ -256,7 +261,7 @@ export default function HomePage() {
                     </svg>
                   ))}
                 </div>
-                <p className="text-gray-600 italic mb-4">"{testimonial.quote}"</p>
+                <p className="text-gray-600 italic mb-4">{'"'}{testimonial.quote}{'"'}</p>
                 <p className="font-medium">— {testimonial.author}</p>
               </div>
             ))}

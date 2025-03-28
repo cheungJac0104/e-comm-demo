@@ -1,6 +1,7 @@
 "use client";
 
-import { FiArrowLeft, FiShoppingCart, FiHeart, FiShare2, FiStar, FiChevronRight, FiChevronLeft, FiCheck } from 'react-icons/fi';
+import Image from 'next/image';
+import { FiArrowLeft, FiShoppingCart, FiHeart, FiShare2, FiStar, FiCheck } from 'react-icons/fi';
 import { FaFacebookF, FaTwitter, FaPinterestP } from 'react-icons/fa';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -72,10 +73,12 @@ export default function ProductPage({ params }: { params: { id: string } }) {
                     onClick={() => setCurrentImage(idx)}
                     className={`relative rounded-md bg-white overflow-hidden flex items-center justify-center h-24 ${currentImage === idx ? 'ring-2 ring-indigo-500' : 'hover:ring-1 hover:ring-gray-300'}`}
                   >
-                    <img
+                    <Image
                       src={image}
                       alt={`${product.name} view ${idx + 1}`}
                       className="object-cover object-center h-full"
+                      width={200}
+                      height={200}
                     />
                   </button>
                 ))}
@@ -83,10 +86,12 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             </div>
 
             <div className="w-full aspect-w-1 aspect-h-1 rounded-lg overflow-hidden">
-              <img
+              <Image
                 src={product.images[currentImage]}
                 alt={product.name}
                 className="w-full h-full object-center object-cover"
+                width={600}
+                height={600}
               />
               <div className="absolute top-4 right-4 bg-white rounded-full p-2 shadow-md">
                 <button className="text-gray-400 hover:text-red-500">
@@ -293,10 +298,12 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             {product.aiRecommendations.map((item) => (
               <div key={item.id} className="group relative">
                 <div className="w-full min-h-80 bg-gray-200 aspect-w-1 aspect-h-1 rounded-md overflow-hidden group-hover:opacity-75 lg:h-80 lg:aspect-none">
-                  <img
+                  <Image
                     src={item.image}
                     alt={item.name}
                     className="w-full h-full object-center object-cover lg:w-full lg:h-full"
+                    width={500}
+                    height={500}
                   />
                 </div>
                 <div className="mt-4 flex justify-between">
