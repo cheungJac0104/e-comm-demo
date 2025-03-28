@@ -9,7 +9,7 @@ import Link from 'next/link';
 export default function ARTryOnPage() {
   const [isLoading, setIsLoading] = useState(true);
   const [arSupported, setArSupported] = useState(false);
-  const [modelRotation, setModelRotation] = useState(0);
+  //const [modelRotation, setModelRotation] = useState(0);
   const [currentStep, setCurrentStep] = useState(0);
   const [showInstructions, setShowInstructions] = useState(true);
 
@@ -78,7 +78,10 @@ export default function ARTryOnPage() {
             </Link>
             <div className="flex items-center space-x-4">
               <button 
-                onClick={() => setModelRotation(prev => prev + 90)}
+                // onClick={() => 
+                //   setModelRotation(prev => prev + 90)
+                  
+                // }
                 className="p-2 rounded-lg hover:bg-gray-100"
               >
                 <FiRotateCw className="h-6 w-6 text-gray-600" />

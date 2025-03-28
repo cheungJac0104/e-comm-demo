@@ -6,6 +6,8 @@ import {
     GlobeAltIcon,
     HeartIcon
   } from '@heroicons/react/24/outline';
+
+  import Image from 'next/image';
   
   const AboutPage = () => {
     const team = [
@@ -155,7 +157,7 @@ import {
             <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
               {team.map((person) => (
                 <div key={person.name} className="bg-white rounded-lg shadow-md overflow-hidden">
-                  <img className="w-full h-48 object-cover" src={person.image} alt={person.name} />
+                  <Image className="w-full h-48 object-cover" src={person.image} alt={person.name} />
                   <div className="p-6">
                     <h3 className="text-lg font-medium text-gray-900">{person.name}</h3>
                     <p className="text-indigo-600">{person.role}</p>

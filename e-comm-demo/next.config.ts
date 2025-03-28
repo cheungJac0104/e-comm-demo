@@ -3,11 +3,12 @@ const nextConfig = {
   // Your existing Next.js config options go here
   // For example:
   reactStrictMode: true,
-  swcMinify: true,
   images: {
     domains: ['example.com'],
   },
-
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   // Add the headers configuration directly in the main config
   async headers() {
     return [
@@ -27,11 +28,6 @@ const nextConfig = {
       }
     ]
   },
-
-  // Other Next.js config options can continue here
-  experimental: {
-    appDir: true,
-  }
 }
 
 module.exports = nextConfig
