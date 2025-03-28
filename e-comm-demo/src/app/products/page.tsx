@@ -6,10 +6,12 @@ import { FaFacebookF, FaTwitter, FaPinterestP } from 'react-icons/fa';
 import Link from 'next/link';
 import { useState } from 'react';
 
-export default function ProductPage({ params }: { params: { id: string } }) {
+export default function ProductPage(
+  //{ params }: { params: { id: string } }
+) {
   // Mock product data - replace with your actual data source
   const product = {
-    id: params.id,
+    id: 1,
     name: "Organic Yoga Set",
     price: 89.99,
     discountPrice: 76.49,
