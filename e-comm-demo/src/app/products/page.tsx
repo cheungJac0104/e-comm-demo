@@ -152,7 +152,8 @@ export default function ProductPage({ params }: { params: { id: string } }) {
             {/* AR Try-On Button */}
             <div className="mt-6">
               <Link 
-                href={`/ar-try-on/${product.id}`}
+                //href={`/ar-try-on/${product.id}`}
+                href={`/ar-try-on`}
                 className="w-full flex items-center justify-center bg-indigo-600 py-3 px-8 border border-transparent rounded-md text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
                 Try in AR

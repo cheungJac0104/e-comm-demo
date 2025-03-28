@@ -13,6 +13,7 @@ module.exports = {
         },
         aspectRatio: {
             '1': '1',
+            'ar': '1 / 1',
           },
       },
     },
