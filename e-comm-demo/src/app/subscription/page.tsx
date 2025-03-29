@@ -24,7 +24,7 @@ const SubscriptionPage = () => {
         },
         { 
           id: 'pro', 
-          name: 'Business', 
+          name: 'Villager', 
           price: 29, 
           features: features_list.slice(0, 6),
           features_description: [
@@ -38,7 +38,7 @@ const SubscriptionPage = () => {
         },
         { 
           id: 'enterprise', 
-          name: 'Enterprise', 
+          name: 'Explorer', 
           price: 99, 
           features: features_list,
           features_description: [
@@ -70,7 +70,7 @@ const SubscriptionPage = () => {
       },
       { 
         id: 'pro', 
-        name: 'Business', 
+        name: 'Villager', 
         price: 29, 
         features: features_list.slice(0, 6),
         features_description: [
@@ -84,7 +84,7 @@ const SubscriptionPage = () => {
       },
       { 
         id: 'enterprise', 
-        name: 'Enterprise', 
+        name: 'Explorer', 
         price: 99, 
         features: features_list,
         features_description: [
