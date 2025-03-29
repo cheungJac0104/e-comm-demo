@@ -76,7 +76,7 @@ const AIAssistantPage = () => {
       {/* Main Content */}
       <main className="flex-1 overflow-hidden flex flex-col">
         {/* Chat Container */}
-        <div className="flex-1 overflow-y-auto p-4 space-y-6">
+        <div className="flex-1 overflow-y-auto p-4 space-y-6 space-x-4 pr-64">
           {messages.map((message) => (
             <div
               key={message.id}
