@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { PaperAirplaneIcon, ArrowPathIcon, UserIcon, SparklesIcon, CommandLineIcon, LightBulbIcon } from '@heroicons/react/24/outline';
+import { PaperAirplaneIcon, ArrowPathIcon,  SparklesIcon, LightBulbIcon, ShoppingBagIcon, TagIcon, ChatBubbleBottomCenterTextIcon } from '@heroicons/react/24/outline';
 
 const AIAssistantPage = () => {
   const [messages, setMessages] = useState([
@@ -49,10 +49,10 @@ const AIAssistantPage = () => {
   }, [messages]);
 
   const suggestedPrompts = [
-    "Explain quantum computing in simple terms",
-    "Suggest a workout plan for beginners",
-    "Help me debug this Python code",
-    "Create a meal plan for weight loss"
+    "Show me summer dresses under $50",
+    "What's the best laptop for graphic design?",
+    "Compare these two smartphones",
+    "Recommend gifts for a 5-year-old"
   ];
 
   return (
@@ -167,9 +167,21 @@ const AIAssistantPage = () => {
         <h2 className="text-lg font-medium text-gray-900 mb-4">Capabilities</h2>
         <div className="space-y-3">
           {[
-            { icon: CommandLineIcon, title: "Code Generation", desc: "Write and debug code in multiple languages" },
-            { icon: LightBulbIcon, title: "Creative Ideas", desc: "Brainstorm ideas and suggestions" },
-            { icon: UserIcon, title: "Personal Advice", desc: "Get recommendations tailored for you" }
+            { 
+                icon: ShoppingBagIcon, 
+                title: "Recommendations", 
+                desc: "Get personalized product suggestions based on your preferences" 
+              },
+              { 
+                icon: TagIcon, 
+                title: "Deal Finder", 
+                desc: "Discover the best discounts and promotions available" 
+              },
+              { 
+                icon: ChatBubbleBottomCenterTextIcon, 
+                title: "Shopping Assistant", 
+                desc: "Get help with sizing, colors, and product comparisons" 
+              }
           ].map((feature, index) => (
             <div key={index} className="p-3 bg-gray-50 rounded-lg">
               <div className="flex items-center">
