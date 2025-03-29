@@ -17,6 +17,7 @@ export default function HomePage() {
             <Link href="/ar-try-on" className="text-gray-700 hover:text-indigo-600 transition">AR Try-On</Link>
             <Link href="/subscription" className="text-gray-700 hover:text-indigo-600 transition">Subscription</Link>
             <Link href="/about" className="text-gray-700 hover:text-indigo-600 transition">Our Story</Link>
+            <Link href="/assistant" className="text-gray-700 hover:text-indigo-600 transition">AI Assistant</Link>
           </div>
           <div className="flex items-center space-x-4">
             <button className="p-2 rounded-full hover:bg-gray-100">
