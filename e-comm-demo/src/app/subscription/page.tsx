@@ -58,8 +58,8 @@ const SubscriptionPage = () => {
     [
       { 
         id: 'basic', 
-        name: 'Starter', 
-        price: 9, 
+        name: 'Adventurer', 
+        price: 90, 
         features: features_list.slice(0, 4),
         features_description: [
           'Free delivery on orders over $50',
@@ -70,8 +70,8 @@ const SubscriptionPage = () => {
       },
       { 
         id: 'pro', 
-        name: 'Villager', 
-        price: 29, 
+        name: 'Quester', 
+        price: 290, 
         features: features_list.slice(0, 6),
         features_description: [
           'Free delivery with no minimum order',
@@ -84,8 +84,8 @@ const SubscriptionPage = () => {
       },
       { 
         id: 'enterprise', 
-        name: 'Explorer', 
-        price: 99, 
+        name: 'Emperor', 
+        price: 990, 
         features: features_list,
         features_description: [
           'Unlimited free express shipping',
