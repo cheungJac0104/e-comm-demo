@@ -6,17 +6,98 @@ import { CheckIcon } from '@heroicons/react/24/outline';
 const SubscriptionPage = () => {
   const [billingInterval, setBillingInterval] = useState<'monthly' | 'annual'>('monthly');
   const [selectedPlan, setSelectedPlan] = useState('pro');
+  const features_list = ['Free Delivery', 'Refund Policy', 'Product Listings', 'Customer Support', 'Exclusive Deals','Analytics', 'Branding', 'Account Manager', 'Premium Services'];
 
   const plans = {
     monthly: [
-      { id: 'basic', name: 'Basic', price: 9, features: ['Projects'], features_description: [' Unlimited Projects'] },
-      { id: 'pro', name: 'Professional', price: 29, features: ['Projects', 'Team Members', 'Analytics'], features_description: ['Unlimited Projects', '10 Team Members', 'Advanced Analytics'] },
-      { id: 'enterprise', name: 'Enterprise', price: 99, features: ['Projects', 'Team Members', 'Analytics', 'Support', 'Custom Domain'], features_description: ['Unlimited Projects', 'Unlimited Team Members', 'Advanced Analytics', '24/7 Support', 'Custom Domain'] }
+        { 
+          id: 'basic', 
+          name: 'Starter', 
+          price: 9, 
+          features: features_list.slice(0, 4),
+          features_description: [
+            'Free delivery on orders over $50',
+            '7-day hassle-free refund policy',
+            'List up to 50 products in your store',
+            'Standard customer support (Mon-Fri)'
+          ]
+        },
+        { 
+          id: 'pro', 
+          name: 'Business', 
+          price: 29, 
+          features: features_list.slice(0, 6),
+          features_description: [
+            'Free delivery with no minimum order',
+            '15-day extended refund guarantee',
+            'List up to 500 products',
+            'Priority email & chat support',
+            'Exclusive member discounts & early access',
+            'Basic sales analytics dashboard'
+          ]
+        },
+        { 
+          id: 'enterprise', 
+          name: 'Enterprise', 
+          price: 99, 
+          features: features_list,
+          features_description: [
+            'Unlimited free express shipping',
+            '30-day no-questions-asked returns',
+            'Unlimited product listings',
+            '24/7 VIP priority support',
+            'Advanced analytics & sales predictions',
+            'Custom branding & white-label options',
+            'Dedicated account manager',
+            'Premium onboarding & product photography'
+          ]
+        }
+      
     ],
-    annual: [
-      { id: 'basic', name: 'Basic', price: 90, features: ['Projects'], features_description: ['Unlimited Projects'] },
-      { id: 'pro', name: 'Professional', price: 290, features: ['Projects', 'Team Members', 'Analytics'], features_description: ['Unlimited Projects', 'Unlimited Team Members', 'Advanced Analytics'] },
-      { id: 'enterprise', name: 'Enterprise', price: 990, features: ['Projects', 'Team Members', 'Analytics', 'Support', 'Custom Domain'], features_description: ['Unlimited Projects', 'Unlimited Team Members', 'Advanced Analytics', '24/7 Support', 'Custom Domain'] }
+    annual: 
+    [
+      { 
+        id: 'basic', 
+        name: 'Starter', 
+        price: 9, 
+        features: features_list.slice(0, 4),
+        features_description: [
+          'Free delivery on orders over $50',
+          '7-day hassle-free refund policy',
+          'List up to 50 products in your store',
+          'Standard customer support (Mon-Fri)'
+        ]
+      },
+      { 
+        id: 'pro', 
+        name: 'Business', 
+        price: 29, 
+        features: features_list.slice(0, 6),
+        features_description: [
+          'Free delivery with no minimum order',
+          '15-day extended refund guarantee',
+          'List up to 500 products',
+          'Priority email & chat support',
+          'Exclusive member discounts & early access',
+          'Basic sales analytics dashboard'
+        ]
+      },
+      { 
+        id: 'enterprise', 
+        name: 'Enterprise', 
+        price: 99, 
+        features: features_list,
+        features_description: [
+          'Unlimited free express shipping',
+          '30-day no-questions-asked returns',
+          'Unlimited product listings',
+          '24/7 VIP priority support',
+          'Advanced analytics & sales predictions',
+          'Custom branding & white-label options',
+          'Dedicated account manager',
+          'Premium onboarding & product photography'
+        ]
+      }
     ]
   };
 
@@ -103,7 +184,7 @@ const SubscriptionPage = () => {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-200">
-              {['Projects', 'Team Members', 'Analytics', 'Support', 'Custom Domain'].map((feature) => (
+              {features_list.map((feature) => (
                 <tr key={feature}>
                   <td className="px-6 py-4 text-sm text-gray-700">{feature}</td>
                   {plans[billingInterval].map((plan) => (
